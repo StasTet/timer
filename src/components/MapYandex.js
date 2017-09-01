@@ -31,7 +31,7 @@ class MapYandex extends Component {
                      { this.renderMap() }
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button onClick={this.closeModal.bind(this)}>Close</Button>
+                    <Button onClick={this.closeModal.bind(this)}>Закрыть</Button>
                 </Modal.Footer>
             </Modal>
         )
@@ -45,11 +45,7 @@ class MapYandex extends Component {
     renderMap() {
         return (
             <YMaps>
-                <Map state={this.mapState}>
-            
-
-            
-                </Map>
+                <Map state={this.mapState} />
             </YMaps>
         )
     }
