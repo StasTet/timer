@@ -3,6 +3,7 @@ import Buttons from './Button';
 import ComeForm from './ComeForm';
 import CurrentTime from './CurrentTime';
 import TimeLeft from './TimeLeft';
+import MapYandex from './MapYandex';
 import logo from '../image/time.svg';
 import '../style/App.css';
 
@@ -87,7 +88,12 @@ class App extends Component {
 
     renderLeftTime() {
         if (JSON.parse(this.state.come) && !JSON.parse(this.state.showForm)) {
-            return <TimeLeft {...this.state}/>
+            return (
+                <div>
+                    <TimeLeft {...this.state} />
+                    <MapYandex />
+                </div>
+            )
         }
 
         return null;
@@ -107,8 +113,6 @@ class App extends Component {
 
                 { this.renderForm() }
                 { this.renderLeftTime() }
-                
-
             </div>
         );
     }
